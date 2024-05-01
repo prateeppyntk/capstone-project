@@ -24,7 +24,7 @@ transform them into a set of dimensional tables for further analysis.
 
 ## Datasets
 
-[Air4Thai: Regional Air Quality and Situation Reports]([http://www.air4thai.com/webV3/#/History])
+[Air4Thai: Regional Air Quality and Situation Reports](http://www.air4thai.com/webV3/#/History)
 
 
 ## Data Modeling
