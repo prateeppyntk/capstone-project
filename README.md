@@ -24,8 +24,8 @@ transform them into a set of dimensional tables for further analysis.
 
 ## Datasets
 
-* [Climate Change: Earth Surface Temperature Data](https://www.kaggle.com/datasets/berkeleyearth/climate-change-earth-surface-temperature-data)
-* [World Bank Country Profile](https://public.opendatasoft.com/explore/dataset/worldbank-country-profile/table/?disjunctive.country_name&disjunctive.indicator_name&sort=-year)
+* [Air4Thai: Regional Air Quality and Situation Reports]([https://www.kaggle.com/datasets/berkeleyearth/climate-change-earth-surface-temperature-data](http://www.air4thai.com/webV3/#/History))
+
 
 ## Data Modeling
 
