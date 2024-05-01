@@ -1,4 +1,4 @@
-# Climate Change with World Bank Data Analysis Pipeline
+# Build Data Analysis Pipeline for PM2.5 in Thailand
 
 **Table of Contents**
 
@@ -15,12 +15,7 @@
 
 ## Project Overview
 
-This project builds an automated ETL/ELT data pipeline. It aims to create
-a star schema optimized for queries on climate change with world bank country
-profile data analysis. We extract data from S3, process the data using Spark,
-save them in Parquet back into S3. Spark process is deployed on a cluster using
-AWS. At the end, we use the data stored in S3, stage them in Redshift, and
-transform them into a set of dimensional tables for further analysis.
+โปรเจคจะทำการสร้าง Data Pipeline เพื่อทำกระบวนการ Automate ETL/ELT มีจุดมุ่งหมายเพื่อสร้างสคีมาดาวที่ปรับให้เหมาะสมสำหรับการสืบค้นเกี่ยวกับการเปลี่ยนแปลงสภาพภูมิอากาศด้วยการวิเคราะห์ข้อมูลโปรไฟล์ประเทศของธนาคารโลก เราดึงข้อมูลจาก databricks, ประมวลผลข้อมูลโดยใช้ PySpark, บันทึกกลับเข้าไปใน databricks กระบวนการ Spark ถูกปรับใช้บนคลัสเตอร์โดยใช้ AWS ในตอนท้าย เราใช้ข้อมูลที่จัดเก็บไว้ใน S3 จัดระยะใน Redshift และแปลงเป็นชุดตารางมิติสำหรับการวิเคราะห์เพิ่มเติม
 
 ## Datasets
 
