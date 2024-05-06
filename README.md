@@ -6,16 +6,20 @@
 * [Datasets](#datasets)
 * [Data Modeling](#data-modeling)
 * [Data Dictionary](#data-dictionary)
-* [Data Quality Checks](#data-quality-checks)
 * [Data infrastructure](#data-infrastructure)
 * [Technologies](#technologies)
+* [Dashboard](#dashboard)
 * [Files and What They Do](#files-and-what-they-do)
 * [Instruction on Running the Project](#instruction-on-running-the-project)
 
 
 ## Problem
 
+ตั้งแต่ต้นปี 2562 ประเทศไทยเกิดปรากฏการณ์ค่าฝุ่นปกคลุมอย่างหนาแน่น ทำให้ทุกหน่วยงานต้องรีบหาคำตอบว่ามันคืออะไร จนพบว่า มันคือ
 
+นับจากนั้นมาทำให้ทุกคนเริ่มหันมาสนใจความฝุ่น PM2.5 กันมากขึ้น โดยที่
+
+จากปัญหาที่กล่าวมาข้างต้น จึงอยากทราบว่าปัจจัยใดที่จะเป็นปัจจัยที่ส่งผลต่อปริมาณฝุ่น PM2.5 มากกว่ากันระหว่างโรงงานอุตสาหกรรมหรือไฟป่า 
 
 ## Datasets
 
@@ -24,8 +28,7 @@
 * ข้อมูลโรงงานอุตสาหกรรมในประเทศไทย [Air4Thai: Regional Air Quality and Situation Reports](http://www.air4thai.com/webV3/#/History)
 
 ## Data Modeling
-
-
+[data_model.png]
 
 ## Data Dictionary
 
@@ -79,15 +82,6 @@
 | factory_type_name | varchar | Name of factory type |
 
 
-## Data Quality Checks
-
-To ensure the data quality, we'll run the data quality checks to make sure that
-
-* Column `dt` in table `global_temperature` should *not* have NULL values
-* Column `AverageTemperature` in table `global_temperature` should *not* have values greater than 100
-* Table `worldbank` should have records
-* Column `value` in table `worldbank` should *not* have NULL values
-
 ## Data Infrastructure
 
 
@@ -98,6 +92,10 @@ To ensure the data quality, we'll run the data quality checks to make sure that
 * Databricks: ใช้สำหรับเป็น Data Lake, Data Warehouse, และ Data Ingestion เพื่อดึงข้อมูล API ตาม schedule อัตโนมัติในแต่ละวัน
 * PySpark: ใช้สำหรับการประมวลผลข้อมูล
 * Power BI:  ใช้สำหรับเป็น BI Tool
+
+## Dashboard
+
+
   
 ## Files and What They Do
 
@@ -110,13 +108,13 @@ To ensure the data quality, we'll run the data quality checks to make sure that
 
 ## Instruction on Running the Project
 
-1. Google Sheet
+*  Google Sheet
   1. เปิดไฟล์ pm.csv
 
-2. Databricks
+*  Databricks
   1.
   
-3. Power BI
+*  Power BI
   1. เลือก Get Data ด้วย Azure Databricks
   2. กรอก Server Hostname และ HTTP Path
   3. กรอก Token
