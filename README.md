@@ -30,29 +30,32 @@
 
 ## Data Dictionary
 
-### Stations
-
-| station_code | station_name	| station_address |	lat	long |	province_id |
-| - | - | - | - | - |
-| dt | date | Date (as primary key) |
-| AverageTemperature | decimal | Average land temperature in celsius |
-| AverageTemperatureUncertainty | decimal | The 95% confidence interval around the average  |
-| city | varchar(256) | City |
-| country | varchar(256) | Country |
-| latitude | varchar(256) | Latitude of the city |
-| longitude | varchar(256) | Longitude of the city |
-
-### World Bank Country Profile
+### stations
 
 | Name | Type | Description |
 | - | - | - |
-| id | int | ID (as primary key) |
-| country_code | varchar(256) | Country code |
-| country_name | varchar(256) | Country name |
-| indicator_code | varchar(256) | Indicator code |
-| indicator_name | varchar(256) | Indicator name |
-| value | decimal | Value of the indicator |
-| year | int | Year |
+| station_code | varchar | ID of station (primary key) |
+| station_name | varchar | Name of station |
+| station_address | varchar | Address of station |
+| lat | varchar | Latitude of station |
+| long | varchar | Longitude of station |
+| province_id | varchar | ID of province (foreign key) |
+
+### provinces
+
+| Name | Type | Description |
+| - | - | - | 		
+| province_id | varchar | ID of province (primary key) |
+| province_name | varchar | Name of province |
+| region_id | varchar | ID of region (foreign key) |
+
+### region
+
+| Name | Type | Description |
+| - | - | - | 		
+| region_id | varchar | ID of region (primary key) |
+| region_name | varchar | Name of region |
+
 
 ## Data Quality Checks
 
