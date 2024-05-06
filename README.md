@@ -22,8 +22,9 @@
 
 ## Datasets
 
-[Air4Thai: Regional Air Quality and Situation Reports](http://www.air4thai.com/webV3/#/History)
-
+* ข้อมูล PM2.5 ในประเทศไทย [Air4Thai: Regional Air Quality and Situation Reports](http://www.air4thai.com/webV3/#/History)
+* ข้อมูลไฟป่าในประเทศไทย [Air4Thai: Regional Air Quality and Situation Reports](http://www.air4thai.com/webV3/#/History)
+* ข้อมูลโรงงานอุตสาหกรรมในประเทศไทย [Air4Thai: Regional Air Quality and Situation Reports](http://www.air4thai.com/webV3/#/History)
 
 ## Data Modeling
 
@@ -66,11 +67,11 @@ To ensure the data quality, we'll run the data quality checks to make sure that
 
 ## Technologies
 
-* Apache Airflow for orchestrating workflow
-* Amazon EMR (Spark) for large data processing
-* Amazon S3 for data storage
-* Amazon Redshift for data warehousing and analysis
-
+* Google Sheet: ใช้สำหรับจัดเก็บข้อมูลดิบที่ใช้ในการเริ่มต้น
+* Databricks: ใช้สำหรับเป็น Data Lake, Data Warehouse, และ Data Ingestion เพื่อดึงข้อมูล API ตาม schedule อัตโนมัติในแต่ละวัน
+* PySpark: ใช้สำหรับการประมวลผลข้อมูล
+* Power BI:  ใช้สำหรับเป็น BI Tool
+  
 ## Future Design Considerations
 
 * The data was increased by 100x.
@@ -100,14 +101,6 @@ To ensure the data quality, we'll run the data quality checks to make sure that
 | `mnt/dags/climate_change_with_worldbank_data_pipeline.py` | An Airflow DAG file that runs the ETL data pipeline on climate change and world bank profile data |
 | `mnt/plugins/` | An Airflow plugin folder that contains customer operators used in this project |
 | `spark/app/global_temperature_data_processing.py` | A Spark app that reads the global temperature data from CSV, runs ETL, and saves data in Parquet |
-| `spark/app/worldbank_data_processing.py` | A Spark app that reads the world bank country profile data from JSON, runs ETL, and saves data in Parquet |
-| `create_tables.sql` | A SQL script to create tables |
-| `.env.local` | A environment file that contains the environment variables we want to override in `docker-compose.yaml` and `docker-compose-spark.yaml` |
-| `Dockerfile` | A Dockerfile that contains the instruction how to build an Airflow instance with Amazon EMR provider installed |
-| `docker-compose.yaml` | A Docker Compose file that runs an Airflow instance with Amazon EMR provider installed used in this project |
-| `Dockerfile-spark` | A Dockerfile that contains the instruction how to build an Airflow instance with Apache Spark provider installed |
-| `docker-compose-spark.yaml` | A Docker Compose file that runs an Airflow instance with Apache Spark provider installed |
-| `setup.cfg` | A configuration file for Flake8 |
 | `README.md` | README file that provides discussion on this project |
 
 ## Instruction on Running the Project
