@@ -60,11 +60,11 @@
 
 | Name | Type | Description |
 | - | - | - | 		
-| year | date | year of burned (primary key) |
+| year | date | Year of burned (primary key) |
 | province_id | varchar | ID of province (foreign key) |
-| burned_area | integer | Area of burned |
+| burned_area | integer | Area of burned in each province |
 
-### province_factories
+### province_factories 
 
 | Name | Type | Description |
 | - | - | - | 		
