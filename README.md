@@ -6,7 +6,6 @@
 * [Problem](#problem)
 * [Datasets](#datasets)
 * [Data Modeling](#data-modeling)
-  **[Data Ingestion](#data-ingestion)
 * [Data Dictionary](#data-dictionary)
 * [Data Quality Checks](#data-quality-checks)
 * [Technologies](#technologies)
@@ -19,6 +18,8 @@
 
 โปรเจคจะทำการสร้าง Data Pipeline เพื่อทำกระบวนการ Automate ETL/ELT มีจุดมุ่งหมายเพื่อสร้างสคีมาดาวที่ปรับให้เหมาะสมสำหรับการสืบค้นเกี่ยวกับการเปลี่ยนแปลงสภาพภูมิอากาศด้วยการวิเคราะห์ข้อมูลโปรไฟล์ประเทศของธนาคารโลก เราดึงข้อมูลจาก databricks, ประมวลผลข้อมูลโดยใช้ PySpark, บันทึกกลับเข้าไปใน databricks กระบวนการ Spark ถูกปรับใช้บนคลัสเตอร์โดยใช้ AWS ในตอนท้าย เราใช้ข้อมูลที่จัดเก็บไว้ใน S3 จัดระยะใน Redshift และแปลงเป็นชุดตารางมิติสำหรับการวิเคราะห์เพิ่มเติม
 
+## Problem
+
 ## Datasets
 
 [Air4Thai: Regional Air Quality and Situation Reports](http://www.air4thai.com/webV3/#/History)
@@ -26,51 +27,7 @@
 
 ## Data Modeling
 
-In this project, we'll have two data models as show in the figure below.
 
-![Global Temperature and World Bank Data Modeling](./img/de-capsone-data-model.png)
-
-The data model diagram is created by [dbdiagram.io](https://dbdiagram.io/).
-
-We can use an SQL query to address business questions that provide insights
-into important decisions. For example, if we want to see if the change of the
-land temperature has any impact on the indicators in Thailand or not, we can
-query like this:
-
-```sql
-SELECT
-  g.country,
-  EXTRACT(YEAR FROM g.dt) AS year,
-  AVG(g.AverageTemperature) AS average_temperature,
-  AVG(g.AverageTemperatureUncertainty) AS average_temperature_uncertainty,
-  w.indicator_name AS indicator_name,
-  AVG(w.value) AS indicator_value
-FROM
-  global_temperature g
-JOIN
-  worldbank w
-ON
-  EXTRACT(YEAR FROM g.dt) = g.year
-  AND g.country = w.country_name
-WHERE
-  g.country = "Thailand"
-GROUP BY
-  g.country,
-  EXTRACT(YEAR FROM g.dt),
-  w.indicator_name
-```
-
-Here is a part of the result from the query above:
-
-| country | year | average_temperature | average_temperature_uncertainty | indicator_name | indicator_value |
-| - | - | - | - | - | - |
-| ... |
-| Thailand | 2012 | 28.48466 | 0.344408 | Employment to population ratio, ages 15-24, male (%) (modeled ILO estimate) | 53.51 |
-| Thailand | 2012 | 28.48466 | 0.344408 | Out-of-pocket expenditure per capita (current US$) | 27.71143723 |
-| Thailand | 2013 | 29.07528 | 0.442128 | Labor force participation rate for ages 15-24, total (%) (modeled ILO estimate) | 43.39 |
-| Thailand | 2013 | 29.07528 | 0.442128 | Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate) | 34.21 |
-| Thailand | 2013 | 29.07528 | 0.442128 | Unemployment, youth male (% of male labor force ages 15-24) (modeled ILO estimate) | 0.91 |
-| ... |
 
 ## Data Dictionary
 
