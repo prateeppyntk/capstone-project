@@ -56,6 +56,29 @@
 | region_id | varchar | ID of region (primary key) |
 | region_name | varchar | Name of region |
 
+### burned_areas
+
+| Name | Type | Description |
+| - | - | - | 		
+| year | date | year of burned (primary key) |
+| province_id | varchar | ID of province (foreign key) |
+| burned_area | integer | Area of burned |
+
+### province_factories
+
+| Name | Type | Description |
+| - | - | - | 		
+| province_id | varchar | ID of province (primary key) |
+| factory_type_id | varchar | ID of factory type (primary key) |
+| province_factory_area | integer | Area of factory in each province |
+
+### factory_types
+
+| Name | Type | Description | 	
+| - | - | - | 		
+| factory_type_id | varchar | ID of factory type (primary key) |
+| factory_type_name | varchar | Name of factory type |
+
 
 ## Data Quality Checks
 
