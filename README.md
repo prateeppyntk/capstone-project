@@ -110,13 +110,13 @@ To ensure the data quality, we'll run the data quality checks to make sure that
 
 ## Instruction on Running the Project
 
-* Google Sheet
+1. Google Sheet
   1. เปิดไฟล์ pm.csv
 
-* Databricks
+2. Databricks
   1.
   
-* Power BI
+3. Power BI
   1. เลือก Get Data ด้วย Azure Databricks
   2. กรอก Server Hostname และ HTTP Path
   3. กรอก Token
