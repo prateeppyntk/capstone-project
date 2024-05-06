@@ -2,23 +2,21 @@
 
 **Table of Contents**
 
-* [Project Overview](#project-overview)
 * [Problem](#problem)
 * [Datasets](#datasets)
 * [Data Modeling](#data-modeling)
 * [Data Dictionary](#data-dictionary)
 * [Data Quality Checks](#data-quality-checks)
+* [Data infrastructure](#data-infrastructure)
 * [Technologies](#technologies)
 * [Future Design Considerations](#future-design-considerations)
 * [Files and What They Do](#files-and-what-they-do)
 * [Instruction on Running the Project](#instruction-on-running-the-project)
 
 
-## Project Overview
-
-โปรเจคจะทำการสร้าง Data Pipeline เพื่อทำกระบวนการ Automate ETL/ELT มีจุดมุ่งหมายเพื่อสร้างสคีมาดาวที่ปรับให้เหมาะสมสำหรับการสืบค้นเกี่ยวกับการเปลี่ยนแปลงสภาพภูมิอากาศด้วยการวิเคราะห์ข้อมูลโปรไฟล์ประเทศของธนาคารโลก เราดึงข้อมูลจาก databricks, ประมวลผลข้อมูลโดยใช้ PySpark, บันทึกกลับเข้าไปใน databricks กระบวนการ Spark ถูกปรับใช้บนคลัสเตอร์โดยใช้ AWS ในตอนท้าย เราใช้ข้อมูลที่จัดเก็บไว้ใน S3 จัดระยะใน Redshift และแปลงเป็นชุดตารางมิติสำหรับการวิเคราะห์เพิ่มเติม
-
 ## Problem
+
+
 
 ## Datasets
 
@@ -32,10 +30,10 @@
 
 ## Data Dictionary
 
-### Global Temperature
+### Stations
 
-| Name | Type | Description |
-| - | - | - |
+| station_code | station_name	| station_address |	lat	long |	province_id |
+| - | - | - | - | - |
 | dt | date | Date (as primary key) |
 | AverageTemperature | decimal | Average land temperature in celsius |
 | AverageTemperatureUncertainty | decimal | The 95% confidence interval around the average  |
@@ -64,6 +62,10 @@ To ensure the data quality, we'll run the data quality checks to make sure that
 * Column `AverageTemperature` in table `global_temperature` should *not* have values greater than 100
 * Table `worldbank` should have records
 * Column `value` in table `worldbank` should *not* have NULL values
+
+## Data Infrastructure
+
+
 
 ## Technologies
 
