@@ -3,8 +3,10 @@
 **Table of Contents**
 
 * [Project Overview](#project-overview)
+* [Problem](#problem)
 * [Datasets](#datasets)
 * [Data Modeling](#data-modeling)
+  **[Data Ingestion](#data-ingestion)
 * [Data Dictionary](#data-dictionary)
 * [Data Quality Checks](#data-quality-checks)
 * [Technologies](#technologies)
