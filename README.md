@@ -31,7 +31,7 @@ PM2.5 สามารถเกิดขึ้นได้จากหลาย�
 * ข้อมูลโรงงานอุตสาหกรรมในประเทศไทย [Air4Thai: Regional Air Quality and Situation Reports](http://www.air4thai.com/webV3/#/History)
 
 ## Data Modeling
-[data_model.png]
+![Data Modeling](data_model.png)
 
 ## Data Dictionary
 
