@@ -45,8 +45,10 @@ PM2.5 สามารถเกิดขึ้นได้จากหลาย�
 
 | Name | Type | Description |
 | - | - | - |
-| date | date | Measurement date (primary key) |
 | station_code | varchar | ID of station (foreign key) |
+| date | date | Measurement date (primary key) |
+| province_id | varchar | ID of province (foreign key) |
+| level | | |
 | value | float | Measured value |
 
 ### stations
