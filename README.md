@@ -2,6 +2,7 @@
 
 **Table of Contents**
 
+* [Document](#document)
 * [Problem](#problem)
 * [Datasets](#datasets)
 * [Data Modeling](#data-modeling)
@@ -12,6 +13,8 @@
 * [Files and What They Do](#files-and-what-they-do)
 * [Instruction on Running the Project](#instruction-on-running-the-project)
 
+## Document
+[Go To Document](https://docs.google.com/document/d/1dCnek2Kl9YsPJZxKuAzpLUOfrXD9gWWcaM2maEY4A6g/edit)
 
 ## Problem
 
@@ -152,6 +155,7 @@ PM2.5 สามารถเกิดขึ้นได้จากหลาย�
 | `mnt/plugins/` |  |
 
 ## Instruction on Running the Project
-[Go To Instruction](https://docs.google.com/document/d/1dCnek2Kl9YsPJZxKuAzpLUOfrXD9gWWcaM2maEY4A6g/edit)
+[Go To Instruction](https://docs.google.com/document/d/1-7AHIKPvSPIHpQUK3y93g01lnmfENmwaGRHWCNlyhu0/edit?usp=sharing)
+
 
 
