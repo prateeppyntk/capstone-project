@@ -103,7 +103,7 @@ PM2.5 สามารถเกิดขึ้นได้จากหลาย�
 * Power BI:  ใช้สำหรับเป็น BI Tool
 
 ## Dashboard
-[Go To Dashboard](https://app.powerbi.com/links/vbIWgDk2nx?ctid=f90c4647-886f-4b4c-b2eb-555df9ec4e81&pbi_source=linkShare)
+[Go To Dashboard](https://app.powerbi.com/links/ivZ5SWlCVO?ctid=f90c4647-886f-4b4c-b2eb-555df9ec4e81&pbi_source=linkShare)
 
 
   
