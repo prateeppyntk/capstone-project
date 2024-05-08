@@ -99,8 +99,9 @@ PM2.5 สามารถเกิดขึ้นได้จากหลาย�
 | factory_type_name | varchar | Name of factory type |
 
 
-## Data Infrastructure
+## Data Pipeline
 
+![Data Pipeline](data_pipeline.png)
 
 
 ## Technologies
