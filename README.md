@@ -125,15 +125,6 @@ PM2.5 สามารถเกิดขึ้นได้จากหลาย�
 | `mnt/plugins/` |  |
 
 ## Instruction on Running the Project
+[Go To Instruction](https://docs.google.com/document/d/1dCnek2Kl9YsPJZxKuAzpLUOfrXD9gWWcaM2maEY4A6g/edit)
 
-*  Google Sheet
-  1. เปิดไฟล์ pm.csv
-
-*  Databricks
-  1.
-  
-*  Power BI
-  1. เลือก Get Data ด้วย Azure Databricks
-  2. กรอก Server Hostname และ HTTP Path
-  3. กรอก Token
 
