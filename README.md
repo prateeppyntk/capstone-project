@@ -41,15 +41,66 @@ PM2.5 สามารถเกิดขึ้นได้จากหลาย�
 
 ## Data Dictionary
 
-### pm2.5
+### PM2.5
 
 | Name | Type | Description |
 | - | - | - |
-| station_code | varchar | ID of station (foreign key) |
+| station_code | varchar | ID of station (primary key) |
 | date | date | Measurement date (primary key) |
-| province_id | varchar | ID of province (foreign key) |
-| level | | |
-| value | float | Measured value |
+| province_id | int | ID of province (foreign key) |
+| value | int | Measured value |
+| level | int | Air quality level |
+
+### Dates
+
+| Name | Type | Description |
+| - | - | - |
+| date | date | Measurement date (primary key) |
+| year | int | Measurement year (primary key) |
+| month | int | Measurement month |
+| month_name | varchar | Measurement month's name |
+
+### provinces
+
+| Name | Type | Description |
+| - | - | - | 		
+| province_id | int | ID of province (primary key) |
+| province_name | varchar | Name of province |
+| region_id | int | ID of region (foreign key) |
+| region_name | varchar | Name of region |
+
+### burned_areas
+
+| Name | Type | Description |
+| - | - | - | 		
+| year | int | Measurement year (primary key) |
+| date | date | Measurement date (primary key) |
+| province_id | int | ID of province (foreign key) |
+| burned_area | decimal | Area of burned in each province |
+
+### province_factories 
+
+| Name | Type | Description |
+| - | - | - | 		
+| factory_type_id | int | ID of factory type (primary key) |
+| province_id | int | ID of province (primary key) |
+| province_factory_area | decimal | Area of factory in each province |
+
+### factory_types
+
+| Name | Type | Description | 	
+| - | - | - | 		
+| factory_type_id | int | ID of factory type (primary key) |
+| factory_type_name | varchar | Name of factory type |
+
+### level
+
+| Name | Type | Description |
+| - | - | - |
+| level | int | Air quality level (primary key) |
+| min | int | Min of air quality level range |
+| max | int | Max of air quality level range |
+| description | varchar | Descripton of air quality level |
 
 ### stations
 
@@ -58,47 +109,20 @@ PM2.5 สามารถเกิดขึ้นได้จากหลาย�
 | station_code | varchar | ID of station (primary key) |
 | station_name | varchar | Name of station |
 | station_address | varchar | Address of station |
-| lat | varchar | Latitude of station |
-| long | varchar | Longitude of station |
-| province_id | varchar | ID of province (foreign key) |
+| lat | decimal | Latitude of station |
+| long | decimal | Longitude of station |
 
-### provinces
-
-| Name | Type | Description |
-| - | - | - | 		
-| province_id | varchar | ID of province (primary key) |
-| province_name | varchar | Name of province |
-| region_id | varchar | ID of region (foreign key) |
-
-### region
+### PM2.5SummaryByStation
 
 | Name | Type | Description |
 | - | - | - | 		
-| region_id | varchar | ID of region (primary key) |
-| region_name | varchar | Name of region |
-
-### burned_areas
-
-| Name | Type | Description |
-| - | - | - | 		
-| year | date | Year of burned (primary key) |
-| province_id | varchar | ID of province (foreign key) |
-| burned_area | integer | Area of burned in each province |
-
-### province_factories 
-
-| Name | Type | Description |
-| - | - | - | 		
-| province_id | varchar | ID of province (primary key) |
-| factory_type_id | varchar | ID of factory type (primary key) |
-| province_factory_area | integer | Area of factory in each province |
-
-### factory_types
-
-| Name | Type | Description | 	
-| - | - | - | 		
-| factory_type_id | varchar | ID of factory type (primary key) |
-| factory_type_name | varchar | Name of factory type |
+| station_code | varchar | ID of station (primary key) |
+| avg | decimal | Average of pm2.5 value |
+| avg_level | int | Air quality level of average pm2.5 value |
+| max | decimal | Max of pm2.5 value |
+| max_level | int | Air quality level of max pm2.5 value |
+| min | decimal | Min of pm2.5 value |
+| min_level | int | Air quality level of min pm2.5 value |
 
 
 ## Data Pipeline
