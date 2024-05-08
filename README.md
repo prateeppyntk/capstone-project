@@ -37,7 +37,7 @@ PM2.5 สามารถเกิดขึ้นได้จากหลาย�
   <br /> [Department of Industrial Works:  พื้นที่โรงงานอุตสาหกรรม](https://www.diw.go.th/datahawk/factype.php)
 
 ## Data Modeling
-![Data Modeling](data_model.png)
+![Data Modeling_Raw](data_model_raw.png)
 
 ## Data Dictionary
 
