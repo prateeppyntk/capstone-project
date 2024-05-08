@@ -6,7 +6,7 @@
 * [Datasets](#datasets)
 * [Data Modeling](#data-modeling)
 * [Data Dictionary](#data-dictionary)
-* [Data infrastructure](#data-infrastructure)
+* [Data Pipeline](#data-pipeline)
 * [Technologies](#technologies)
 * [Dashboard](#dashboard)
 * [Files and What They Do](#files-and-what-they-do)
