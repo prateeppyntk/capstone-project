@@ -41,6 +41,14 @@ PM2.5 สามารถเกิดขึ้นได้จากหลาย�
 
 ## Data Dictionary
 
+### pm2.5
+
+| Name | Type | Description |
+| - | - | - |
+| date | date | Measurement date |
+| station_code | varchar | ID of station (primary key) |
+| value | float | Measured value |
+
 ### stations
 
 | Name | Type | Description |
