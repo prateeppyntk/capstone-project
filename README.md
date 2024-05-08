@@ -30,7 +30,9 @@ PM2.5 สามารถเกิดขึ้นได้จากหลาย�
 
 * ข้อมูล PM2.5 ในประเทศไทย [Air4Thai: Regional Air Quality and Situation Reports](http://www.air4thai.com/webV3/#/History)
 * ข้อมูลไฟป่าในประเทศไทย [Digital Government Development Agency:  Open Government Data of Thailand](https://data.go.th/dataset/gdpublish-fire1)
-* ข้อมูลโรงงานอุตสาหกรรมในประเทศไทย [Department of Industrial Works:  บัญชีประเภทโรงงานอุตสาหกรรม](https://www.diw.go.th/datahawk/factype.php)   [Department of Industrial Works:  พื้นที่โรงงานอุตสาหกรรม](https://www.diw.go.th/datahawk/factype.php)
+* ข้อมูลโรงงานอุตสาหกรรมในประเทศไทย
+  [Department of Industrial Works:  บัญชีประเภทโรงงานอุตสาหกรรม](https://www.diw.go.th/datahawk/factype.php)
+  [Department of Industrial Works:  พื้นที่โรงงานอุตสาหกรรม](https://www.diw.go.th/datahawk/factype.php)
 
 ## Data Modeling
 ![Data Modeling](data_model.png)
