@@ -154,9 +154,9 @@ PM2.5 สามารถเกิดขึ้นได้จากหลาย�
 ## Files and What They Do
 
 | Name | Description |
-| - | - |
+| ----- | - |
 | `README.md` | README file that provides discussion on this project |
-| `data-api-upsert.py` | This file is the Python notebook that uses to create table, create view, and insert data from Google Sheet and API |
+| `data-api-upsert.py` | This file is the Python notebook that uses to create table, create view, insert data, and rest API in daily |
 | `PM2.5(2020-2023).xlsx` | PM2.5 value data from 2020-2023 for using in starting the project |
 | `data_init.txt` |  This file contained Google Sheet link that will be used when start the project |
 
