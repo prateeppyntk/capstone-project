@@ -141,7 +141,7 @@ PM2.5 สามารถเกิดขึ้นได้จากหลาย�
 
 ## Technologies
 
-* Google Sheet: ใช้สำหรับจัดเก็บข้อมูลดิบที่ใช้ในการเริ่มต้น
+* Google Sheet: ใช้สำหรับจัดเก็บข้อมูลที่ใช้ในการเริ่มต้น
 * Databricks: ใช้สำหรับเป็น Data Warehouse และ Data Ingestion เพื่อดึงข้อมูล API ตาม schedule ใน workflow อัตโนมัติในแต่ละวัน
 * PySpark: ใช้สำหรับการประมวลผลข้อมูล
 * Power BI:  ใช้สำหรับเป็น BI Tool
@@ -156,9 +156,9 @@ PM2.5 สามารถเกิดขึ้นได้จากหลาย�
 | Name | Description |
 | - | - |
 | `README.md` | README file that provides discussion on this project |
-| `data-api-upsert.py` |  |
+| `data-api-upsert.py` | This file is the Python notebook that uses to create table, create view, and insert data from Google Sheet and API |
 | `PM2.5(2020-2023).xlsx` | PM2.5 value data from 2020-2023 for using in starting the project |
-| `data_init.txt` | data_init file contained Google Sheet link which will be used when start the project |
+| `data_init.txt` |  This file contained Google Sheet link that will be used when start the project |
 
 ## Instruction on Running the Project
 [Go To Instruction](https://docs.google.com/document/d/1-7AHIKPvSPIHpQUK3y93g01lnmfENmwaGRHWCNlyhu0/edit?usp=sharing)
