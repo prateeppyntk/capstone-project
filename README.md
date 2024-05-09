@@ -157,7 +157,8 @@ PM2.5 สามารถเกิดขึ้นได้จากหลาย�
 | - | - |
 | `README.md` | README file that provides discussion on this project |
 | `data-api-upsert.py` |  |
-| `PM2.5(2020-2023).xlsx` | PM2.5 value data from 2020-2023 for use in starting the project |
+| `PM2.5(2020-2023).xlsx` | PM2.5 value data from 2020-2023 for using in starting the project |
+| `data_init.txt` | data_init file contained Google Sheet link which will be used when start the project |
 
 ## Instruction on Running the Project
 [Go To Instruction](https://docs.google.com/document/d/1-7AHIKPvSPIHpQUK3y93g01lnmfENmwaGRHWCNlyhu0/edit?usp=sharing)
