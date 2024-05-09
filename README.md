@@ -2,7 +2,7 @@
 
 **Table of Contents**
 
-* [Document](#document)
+* [Project Document](#project_document)
 * [Problem](#problem)
 * [Datasets](#datasets)
 * [Data Modeling](#data-modeling)
@@ -13,7 +13,7 @@
 * [Files and What They Do](#files-and-what-they-do)
 * [Instruction on Running the Project](#instruction-on-running-the-project)
 
-## Document
+## Project Document
 [Go To Document](https://docs.google.com/document/d/1dCnek2Kl9YsPJZxKuAzpLUOfrXD9gWWcaM2maEY4A6g/edit)
 
 ## Problem
