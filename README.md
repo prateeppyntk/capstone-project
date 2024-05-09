@@ -136,7 +136,7 @@ PM2.5 สามารถเกิดขึ้นได้จากหลาย�
 
 ## Data Pipeline
 
-![Data Pipeline](data_pipeline.jpg)
+![Data Pipeline]()
 
 
 ## Technologies
