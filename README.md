@@ -136,7 +136,7 @@ PM2.5 สามารถเกิดขึ้นได้จากหลาย�
 
 ## Data Pipeline
 
-![Data Pipeline]()
+![Data Pipeline](data_pipeline.jpg)
 
 
 ## Technologies
@@ -154,7 +154,7 @@ PM2.5 สามารถเกิดขึ้นได้จากหลาย�
 ## Files and What They Do
 
 | Name | Description |
-| ------- | - |
+| ------- | --------------- |
 | `README.md` | README file that provides discussion on this project |
 | `data-api-upsert.py` | This file is the Python notebook that uses to create table, create view, insert data, and rest API in daily |
 | `PM2.5(2020-2023).xlsx` | PM2.5 value data from 2020-2023 for using in starting the project |
