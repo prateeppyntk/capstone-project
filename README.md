@@ -14,7 +14,7 @@
 * [Instruction on Running the Project](#instruction-on-running-the-project)
 
 ## Project Document
-[Go To Document](Document_final_project.pdf)
+[Go To Project Document](https://docs.google.com/document/d/1dCnek2Kl9YsPJZxKuAzpLUOfrXD9gWWcaM2maEY4A6g/edit)
 
 ## Problem
 
@@ -152,11 +152,10 @@ PM2.5 สามารถเกิดขึ้นได้จากหลาย�
 | ------- | --------------- |
 | `README.md` | README file that provides discussion on this project |
 | `data-api-upsert.py` | This file is the Python notebook that uses to create table, create view, insert data, and rest API in daily |
-| `PM2.5(2020-2024).xlsx` | PM2.5 value data from 2020-2023 for using in starting the project |
 | `google_sheet_link.txt` |  This file contained Google Sheet link that will be used when start the project |
 
 ## Instruction on Running the Project
-[Go To Instruction](Instruction.pdf)
+[Go To Instruction](https://docs.google.com/document/d/1-7AHIKPvSPIHpQUK3y93g01lnmfENmwaGRHWCNlyhu0/edit)
 
 
 
