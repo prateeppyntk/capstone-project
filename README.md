@@ -14,7 +14,7 @@
 * [Instruction on Running the Project](#instruction-on-running-the-project)
 
 ## Project Document
-![Go To Document](Document_final_project.pdf)
+[Go To Document](Document_final_project.pdf)
 
 ## Problem
 
@@ -156,7 +156,7 @@ PM2.5 สามารถเกิดขึ้นได้จากหลาย�
 | `google_sheet_link.txt` |  This file contained Google Sheet link that will be used when start the project |
 
 ## Instruction on Running the Project
-[Go To Instruction](https://docs.google.com/document/d/1-7AHIKPvSPIHpQUK3y93g01lnmfENmwaGRHWCNlyhu0/edit?usp=sharing)
+[Go To Instruction](Instruction.pdf)
 
 
 
