@@ -2,7 +2,7 @@
 
 **Table of Contents**
 
-* [Project Document](#project_document)
+* [Project Document](#project-document)
 * [Problem](#problem)
 * [Datasets](#datasets)
 * [Data Modeling](#data-modeling)
