@@ -42,75 +42,87 @@ PM2.5 สามารถเกิดขึ้นได้จากหลาย�
 ## Data Modeling
 ![Data Modeling_Raw](data_model_raw.png)
 
+การออกแบบ Data Model ของเรา จะอ้างอิงจากปัญหาที่เราต้องการวิเคราะห์ โดยเราสนใจข้อมูล PM2.5 ในมิติต่าง ๆ ได้แก่ มุมมองของปี จังหวัด ภาค เครื่องวัด รวมถึงคุณภาพอากาศที่แสดงได้จากระดับของฝุ่น นอกจากนี้ เรายังสนใจแนวโน้มของ PM2.5 ที่อาจเกิดจากปัจจัยอย่างพื้นที่โรงงานอุตสาหกรรมและพื้นที่ไฟป่าในมิติต่าง ๆ เช่นกัน 
+
+ดังนั้น เราจึงเลือกออกแบบ Data Modal แบบ Galaxy Schema ซึ่งเป็นการออกแบบโดยมี Fact table 3 ตาราง แบ่งตามกลุ่ม metrics ที่เราสนใจ ได้แก่ PM2.5 โรงงาน และไฟป่า ซึ่ง Fact table เหล่านี้จะใช้ Dimension รวมกัน โดยเลือกออกแบบในรูปแบบดังกล่าวเนื่องจากต้องการความยืดหยุ่น ที่เหมาะกับชุดข้อมูลหลาย ๆ เรื่อง ซึ่งแต่ละเรื่องมีความเกี่ยวข้องกัน และมี Dimension ที่ร่วมกันด้วย ทำให้เราวิเคราะห์ได้หลากหลาย และยังรองรับในอนาคตหากเราต้องการวิเคราะห์ปัจจัยอื่นเพิ่มขึ้น
+
 
 ## Data Dictionary
 
-### PM2.5
+### pm2_5
 
-| Name | Type | Description |
-| - | - | - |
-| station_code | varchar | ID of station (primary key) |
-| date | date | Measurement date (primary key) |
-| province_id | int | ID of province (foreign key) |
+| Name | Type | Description | IsKey |
+| - | - | - | - |
+| date | date | Measurement date | yes |
+| province_id | int | ID of province | yes |
+| region_id | int | ID of region | yes |
+| station_code | varchar | ID of station | yes |
+| level | int | Air quality level | yes |
 | value | int | Measured value |
-| level | int | Air quality level |
 
-### Dates
+### dates
 
-| Name | Type | Description |
-| - | - | - |
-| date | date | Measurement date (primary key) |
-| year | int | Measurement year (primary key) |
+| Name | Type | Description | IsKey |
+| - | - | - | - |
+| date | date | Measurement date | yes |
+| year | int | Measurement year |
 | month | int | Measurement month |
 | month_name | varchar | Measurement month's name |
 
 ### provinces
 
-| Name | Type | Description |
-| - | - | - | 		
-| province_id | int | ID of province (primary key) |
+| Name | Type | Description | IsKey |
+| - | - | - | - |
+| province_id | int | ID of province | yes |
 | province_name | varchar | Name of province |
-| region_id | int | ID of region (foreign key) |
+
+### regions
+
+| Name | Type | Description | IsKey |
+| - | - | - | - |
+| region_id | int | ID of region | yes |
 | region_name | varchar | Name of region |
 
 ### burned_areas
 
-| Name | Type | Description |
-| - | - | - | 		
-| year | int | Measurement year (primary key) |
-| date | date | Measurement date (primary key) |
-| province_id | int | ID of province (foreign key) |
+| Name | Type | Description | IsKey |
+| - | - | - | - |
+| region_id | int | ID of region | yes |
+| province_id | int | ID of province | yes |
+| date | date | Measurement date | yes |
+| year | int | Measurement year |
 | burned_area | decimal | Area of burned in each province |
 
 ### province_factories 
 
-| Name | Type | Description |
-| - | - | - | 		
-| factory_type_id | int | ID of factory type (primary key) |
-| province_id | int | ID of province (primary key) |
+| Name | Type | Description | IsKey |
+| - | - | - | - |
+| factory_type_id | int | ID of factory type | yes |
+| region_id | int | ID of region | yes |
+| province_id | int | ID of province | yes |
 | province_factory_area | decimal | Area of factory in each province |
 
 ### factory_types
 
-| Name | Type | Description | 	
-| - | - | - | 		
-| factory_type_id | int | ID of factory type (primary key) |
+| Name | Type | Description | IsKey |
+| - | - | - | - |
+| factory_type_id | int | ID of factory type | yes |
 | factory_type_name | varchar | Name of factory type |
 
 ### level
 
-| Name | Type | Description |
-| - | - | - |
-| level | int | Air quality level (primary key) |
+| Name | Type | Description | IsKey |
+| - | - | - | - |
+| level | int | Air quality level | yes |
 | min | int | Min of air quality level range |
 | max | int | Max of air quality level range |
 | description | varchar | Descripton of air quality level |
 
 ### stations
 
-| Name | Type | Description |
-| - | - | - |
-| station_code | varchar | ID of station (primary key) |
+| Name | Type | Description | IsKey |
+| - | - | - | - |
+| station_code | varchar | ID of station | yes |
 | station_name | varchar | Name of station |
 | station_address | varchar | Address of station |
 | lat | decimal | Latitude of station |
@@ -118,15 +130,15 @@ PM2.5 สามารถเกิดขึ้นได้จากหลาย�
 
 ### PM2.5SummaryByStation
 
-| Name | Type | Description |
-| - | - | - | 		
-| station_code | varchar | ID of station (primary key) |
+| Name | Type | Description | IsKey |
+| - | - | - | - |
+| station_code | varchar | ID of station | yes |
 | avg | decimal | Average of pm2.5 value |
-| avg_level | int | Air quality level of average pm2.5 value |
+| avg_level | int | Air quality level of average pm2.5 value | yes |
 | max | decimal | Max of pm2.5 value |
-| max_level | int | Air quality level of max pm2.5 value |
+| max_level | int | Air quality level of max pm2.5 value | yes |
 | min | decimal | Min of pm2.5 value |
-| min_level | int | Air quality level of min pm2.5 value |
+| min_level | int | Air quality level of min pm2.5 value | yes |
 
 
 ## Data Pipeline
